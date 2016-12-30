@@ -1,0 +1,7 @@
+# ignore all files below
+*.class
+*.iml
+
+# ignore all files under below folders
+*/target/
+.idea/
