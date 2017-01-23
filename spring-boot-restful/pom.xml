@@ -19,4 +19,12 @@
         <version>0.1</version>
     </parent>
 
+    <dependencies>
+        <dependency>
+            <groupId>own.spring.boot</groupId>
+            <artifactId>spring-boot-model</artifactId>
+            <version>0.1</version>
+        </dependency>
+    </dependencies>
+
 </project>
