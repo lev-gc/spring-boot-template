@@ -20,6 +20,22 @@ import own.spring.boot.template.model.user.User;
 public interface UserMapper {
 
     /**
+     * Add user.
+     *
+     * @param user the user
+     * @since spring-boot-restful 0.1
+     */
+    void addUser(User user);
+
+    /**
+     * Delete user.
+     *
+     * @param id the id
+     * @since spring-boot-restful 0.1
+     */
+    void deleteUser(long id);
+
+    /**
      * Gets user.
      *
      * @param id the id
@@ -27,5 +43,13 @@ public interface UserMapper {
      * @since spring-boot-restful 0.1
      */
     User getUser(long id);
+
+    /**
+     * Update user.
+     *
+     * @param user the user
+     * @since spring-boot-restful 0.1
+     */
+    void updateUser(User user);
 
 }

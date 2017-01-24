@@ -19,4 +19,31 @@
         </where>
     </select>
 
+    <insert id="addUser" parameterType="own.spring.boot.template.model.user.User">
+        INSERT INTO table_users
+        <set>
+            <if test="id!=0">
+                id=#{id},
+            </if>
+            name=#{name}
+        </set>
+    </insert>
+
+    <update id="updateUser">
+        UPDATE table_users
+        <set>
+            name=#{name}
+        </set>
+        <where>
+            id=#{id}
+        </where>
+    </update>
+
+    <delete id="deleteUser">
+        DELETE FROM table_users
+        <where>
+            id=#{id}
+        </where>
+    </delete>
+
 </mapper>

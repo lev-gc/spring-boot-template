@@ -31,6 +31,28 @@ public class UserServiceImpl implements UserService {
     private UserMapper mapper;
 
     /**
+     * Add user.
+     *
+     * @param user the user
+     * @since spring-boot-restful 0.1
+     */
+    @Override
+    public void addUser(User user) {
+        mapper.addUser(user);
+    }
+
+    /**
+     * Delete user.
+     *
+     * @param id the id
+     * @since spring-boot-restful 0.1
+     */
+    @Override
+    public void deleteUser(long id) {
+        mapper.deleteUser(id);
+    }
+
+    /**
      * Gets user.
      *
      * @param id the id
@@ -40,6 +62,17 @@ public class UserServiceImpl implements UserService {
     @Override
     public User getUser(long id) {
         return mapper.getUser(id);
+    }
+
+    /**
+     * Update user.
+     *
+     * @param user the user
+     * @since spring-boot-restful 0.1
+     */
+    @Override
+    public void updateUser(User user) {
+        mapper.updateUser(user);
     }
 
 }
