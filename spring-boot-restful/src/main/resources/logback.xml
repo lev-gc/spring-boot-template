@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2017. @author lev-gc
+  -->
+
+<configuration>
+
+    <!-- Output to File day by day -->
+    <appender name="daily_file_log_appender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <pattern>%date %-5level [%thread] %logger{10} [%file:%line] %msg %n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logs/spring-boot-template.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+
+    <!-- Output to console -->
+    <appender name="console_log_appender" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %highlight(%-5level) %logger{36} - %highlight(%msg) %n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- show sql -->
+    <logger name="own.spring.boot.template.restful.mapper" level="DEBUG"/>
+
+    <!-- level and appender -->
+    <root level="INFO">
+        <appender-ref ref="console_log_appender"/>
+        <appender-ref ref="daily_file_log_appender"/>
+    </root>
+
+</configuration>
