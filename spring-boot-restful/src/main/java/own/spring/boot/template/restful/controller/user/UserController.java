@@ -88,7 +88,7 @@ public class UserController {
      *
      * @param id the id
      * @return the user
-     * @since spring -boot-restful 0.1
+     * @since spring-boot-restful 0.1
      */
     @RequestMapping(value = "/user/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<?> getUser(
