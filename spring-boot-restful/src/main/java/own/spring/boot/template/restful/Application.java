@@ -24,12 +24,11 @@ import org.springframework.transaction.PlatformTransactionManager;
  * <p/>
  * <b>Creation Time:</b> 2017/1/22 14:41.
  *
- * @author lev-gc
- * @version $Revision$ 2017/1/22 14:41.
+ * @author Elvis
  * @since spring-boot-restful 0.1
  */
-@SpringBootApplication(scanBasePackages = {"com.richstonedt.*"})
-@MapperScan("com.spring.boot.template.restful.mapper")
+@SpringBootApplication(scanBasePackages = {"own.spring.boot.template.*"})
+@MapperScan("own.spring.boot.template.restful.mapper")
 public class Application {
 
     /**

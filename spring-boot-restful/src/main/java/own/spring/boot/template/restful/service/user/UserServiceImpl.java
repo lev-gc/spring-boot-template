@@ -22,6 +22,11 @@ import own.spring.boot.template.restful.mapper.user.UserMapper;
 @Service
 public class UserServiceImpl implements UserService {
 
+    /**
+     * The Mapper.
+     *
+     * @since spring-boot-restful 0.1
+     */
     @Autowired
     private UserMapper mapper;
 
@@ -34,7 +39,7 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public User getUser(long id) {
-        return mapper.getUser();
+        return mapper.getUser(id);
     }
 
 }

@@ -22,9 +22,10 @@ public interface UserMapper {
     /**
      * Gets user.
      *
+     * @param id the id
      * @return the user
      * @since spring-boot-restful 0.1
      */
-    User getUser();
+    User getUser(long id);
 
 }

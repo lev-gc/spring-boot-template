@@ -8,9 +8,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import own.spring.boot.template.model.user.User;
 import own.spring.boot.template.restful.service.user.UserService;
@@ -31,11 +33,15 @@ public class UserController {
 
     /**
      * The constant LOG.
+     *
+     * @since spring-boot-restful 0.1
      */
     private static final Logger LOG = LoggerFactory.getLogger(UserController.class);
 
     /**
      * The User service.
+     *
+     * @since spring-boot-restful 0.1
      */
     @Autowired
     private UserService userService;
@@ -45,8 +51,9 @@ public class UserController {
      *
      * @param id the id
      * @return the user
+     * @since spring-boot-restful 0.1
      */
-    @RequestMapping("/user/{id}")
+    @RequestMapping(value = "/user/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<?> getUser(
             @PathVariable long id
     ) {
@@ -54,7 +61,7 @@ public class UserController {
             User user = userService.getUser(id);
             return new ResponseEntity<>(user, HttpStatus.OK);
         } catch (Throwable t) {
-            LOG.error("");
+            LOG.error("Failed to get user by id[" + id + "]", t);
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
