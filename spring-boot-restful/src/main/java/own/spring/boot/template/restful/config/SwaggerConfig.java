@@ -51,7 +51,7 @@ public class SwaggerConfig extends WebMvcConfigurerAdapter {
     }
 
     /**
-     * 生成文档基本信息
+     * The basic info of the api doc.
      *
      * @return the api info
      * @since spring-boot-restful 0.1
