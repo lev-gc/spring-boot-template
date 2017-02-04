@@ -41,6 +41,7 @@ public class SwaggerConfig extends WebMvcConfigurerAdapter {
         StopWatch watch = new StopWatch();
         watch.start();
         Docket swaggerSpringMvcPlugin = new Docket(DocumentationType.SWAGGER_2)
+                .useDefaultResponseMessages(false)
                 .groupName("spring-template-boot")
                 .apiInfo(apiInfo())
                 .select().apis(RequestHandlerSelectors.basePackage("own.spring.boot.template.restful"))
