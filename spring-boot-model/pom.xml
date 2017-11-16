@@ -10,12 +10,12 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>spring-boot-model</artifactId>
     <name>${project.artifactId}</name>
-    <version>0.1</version>
+    <version>1.0.0</version>
     <parent>
-        <groupId>own.spring.boot</groupId>
+        <groupId>com.lesson.learn</groupId>
         <artifactId>spring-boot-parent</artifactId>
         <relativePath>../spring-boot-parent</relativePath>
-        <version>0.1</version>
+        <version>1.0.0</version>
     </parent>
 
     <properties>
@@ -24,6 +24,7 @@
     </properties>
 
     <build>
+        <finalName>${artifactId}</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>

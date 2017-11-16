@@ -8,19 +8,24 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>own.spring.boot</groupId>
+    <groupId>com.lesson.learn</groupId>
     <artifactId>spring-boot-parent</artifactId>
     <name>${project.artifactId}</name>
-    <version>0.1</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
-
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.4.2.RELEASE</version>
+        <version>1.5.8.RELEASE</version>
     </parent>
 
+    <modules>
+        <module>../spring-boot-model</module>
+        <module>../spring-boot-restful</module>
+    </modules>
+
     <dependencies>
+        <!-- Spring Framework -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -37,7 +42,7 @@
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>1.0.0</version>
+            <version>1.3.0</version>
         </dependency>
         <!-- MySQL driver -->
         <dependency>
@@ -48,18 +53,18 @@
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
-            <version>2.6.1</version>
+            <version>2.7.0</version>
         </dependency>
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
-            <version>2.6.1</version>
+            <version>2.7.0</version>
         </dependency>
-
+        <!-- Common -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>3.4</version>
+            <version>3.7</version>
         </dependency>
     </dependencies>
 

@@ -5,9 +5,9 @@
 
 <!DOCTYPE mapper PUBLIC "-//mapper.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="own.spring.boot.template.restful.mapper.user.UserMapper">
+<mapper namespace="com.lesson.learn.spring.boot.template.restful.mapper.user.UserMapper">
 
-    <resultMap id="user" type="own.spring.boot.template.model.user.User">
+    <resultMap id="user" type="com.lesson.learn.spring.boot.template.model.user.User">
         <id property="id" column="id"/>
         <result property="name" column="name"/>
     </resultMap>
@@ -15,11 +15,11 @@
     <select id="getUser" resultMap="user">
         SELECT * FROM table_users
         <where>
-            id=#{param1}
+            id=#{id}
         </where>
     </select>
 
-    <insert id="addUser" parameterType="own.spring.boot.template.model.user.User">
+    <insert id="addUser" parameterType="com.lesson.learn.spring.boot.template.model.user.User">
         INSERT INTO table_users
         <set>
             <if test="id!=0">
