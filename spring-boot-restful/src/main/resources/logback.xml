@@ -24,7 +24,7 @@
     </appender>
 
     <!-- show sql -->
-    <logger name="own.spring.boot.template.restful.mapper" level="DEBUG"/>
+    <logger name="com.lesson.learn.spring.boot.template.restful.mapper" level="DEBUG"/>
 
     <!-- level and appender -->
     <root level="INFO">
